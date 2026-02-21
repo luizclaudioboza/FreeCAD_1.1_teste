@@ -1,0 +1,34 @@
+CUSTOMIZAÇÃO TEMPLATE TECHDRAW:
+
+1. Criar um Novo Template Padrão
+Se quiser que o FreeCAD sempre inicie com o seu template modificado:
+Vá em Editar > Preferências > TechDraw.
+Na aba Templates, defina o caminho da pasta onde você guardou o seu template personalizado. 
+Nota: As instruções acima baseiam-se na bancada TechDraw.
+
+COMENTÁRIOS MODELOS 3D:
+
+1. Bug na criação dos alojamentos dos pinos de arraste no obturador.
+Para contornar este problema o sketch do perfil do obturador deve ser feito na parte inferior da linha de centro.
+
+2. Não projeta arestas no plano tangente criado para cotar a furação do antiestático na haste.
+Teve que ser utilizado o centro geométrico da haste para cotar esta furação.
+
+3. Procedimento para criar componente usinado derivado de um componente bruto.
+Método "subshapebinder + operação booleana:
+- Abra os dois arquivos: o da peça bruta e o da peça usinada;
+- No arquivo da peça usinada, crie um novo body e em seguida clique em subshapebinder para criar um novo binder;
+- Vá no arquivo da peça bruta, clique no último objeto criado e arraste para o binder criado no arquivo da peça usinada;
+- Será criada uma cópia em formato superfície da peça bruta;
+- Com o binder selecionado, vá na barra de ferramentas "part design" e selecione "operação booleana";
+- Certificar-se que a opção "Fuse" está selecionada e dar OK;
+- A cópia em formato superfície será transformada em sólido;
+- Iniciar o modelamento da usinagem;
+- Este procedimento mantém o link da peça bruta com a peça usinada.
+
+4. Não é possível localizar a feature executada nem selecionando na árvore de criação nem no ambiente 3D.
+Ele sempre mostra a última feature feita. Dica FreeCad: Nomear cada feature para poder localizar.
+
+5. Bug no arredondamento do raio da tampa quando modela-se o boss do selante.
+Somente no lado da linha de junção da revolução da tampa ela fica canto vivo.
+ 
